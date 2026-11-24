@@ -1,0 +1,55 @@
+# SentinelAI Research Experiment Configurations
+
+baseline_exp0:
+  name: "exp0_baseline_reproduction"
+  description: "Standard single-scale inference at 800x800 native DIOR resolution"
+  model_path: "runs/detect/yolov8n_epochs50_batch16/weights/best.pt"
+  imgsz: 800
+  conf_threshold: 0.25
+  iou_threshold: 0.7
+  batch_size: 16
+  device: "cpu"
+
+resolution_exp1:
+  name: "exp1_resolution_sensitivity"
+  description: "Whole-image inference resolution sensitivity sweep"
+  model_path: "runs/detect/yolov8n_epochs50_batch16/weights/best.pt"
+  resolutions: [640, 800, 1024, 1280]
+  conf_threshold: 0.25
+  iou_threshold: 0.7
+
+spatial_tiling_exp2:
+  name: "exp2_spatial_tiling"
+  description: "Overlapping sliding window inference with coordinate remapping"
+  model_path: "runs/detect/yolov8n_epochs50_batch16/weights/best.pt"
+  tile_sizes: [400, 512]
+  overlap_ratios: [0.15, 0.25, 0.35]
+  fusion_method: "nms"
+  conf_threshold: 0.25
+  fusion_iou_threshold: 0.5
+  include_full_image: true
+
+detection_fusion_exp3:
+  name: "exp3_detection_fusion"
+  description: "Comparative benchmark of cross-tile duplicate fusion methods"
+  tile_size: 400
+  overlap_ratio: 0.25
+  fusion_methods:
+    - "nms"
+    - "soft_nms"
+    - "wbf"
+  iou_thresholds: [0.45, 0.50, 0.55, 0.60]
+
+multiscale_exp4:
+  name: "exp4_multiscale_inference"
+  description: "Multi-scale test-time augmentation ensembling"
+  scales: [640, 800, 1024]
+  fusion_method: "wbf"
+  conf_threshold: 0.25
+
+confidence_optimization_exp5:
+  name: "exp5_threshold_optimization"
+  description: "Validation split threshold tuning for maximal F1 without test leakage"
+  threshold_range: [0.05, 0.85]
+  step: 0.05
+  split: "val"

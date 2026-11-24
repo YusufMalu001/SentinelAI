@@ -1,0 +1,14 @@
+experiment:
+  name: baseline_whole_800
+  seed: 42
+
+inference:
+  mode: whole
+  imgsz: 800
+  confidence_threshold: 0.25
+  iou_threshold: 0.70
+
+evaluation:
+  split: validation
+  iou_threshold: 0.50
+  use_relative_size: true

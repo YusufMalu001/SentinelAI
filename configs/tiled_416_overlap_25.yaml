@@ -1,0 +1,18 @@
+experiment:
+  name: tiled_416_overlap_25
+  seed: 42
+
+inference:
+  mode: tiled
+  tile_size: 416
+  overlap: 0.25
+  confidence_threshold: 0.25
+  iou_threshold: 0.50
+  fusion_method: nms
+  include_full_image: true
+  batch_size: 1
+
+evaluation:
+  split: validation
+  iou_threshold: 0.50
+  use_relative_size: true

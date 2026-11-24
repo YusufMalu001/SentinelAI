@@ -1,0 +1,234 @@
+{
+  "experiment_id": "analysis_tiled_wbf",
+  "timestamp": "2026-11-24T19:27:22.230041+00:00",
+  "config": {
+    "name": "analysis_tiled_wbf",
+    "inference": {
+      "mode": "tiled",
+      "tile_size": 416,
+      "overlap": 0.25,
+      "fusion_method": "wbf"
+    }
+  },
+  "environment": {
+    "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+    "processor": "",
+    "python_version": "3.14.4",
+    "cpu_count_logical": 4,
+    "cpu_count_physical": 2,
+    "total_ram_gb": 14.99,
+    "cuda_available": false,
+    "cuda_device_name": null,
+    "cuda_device_count": 0,
+    "peak_gpu_memory_mb": null,
+    "torch_version": "2.15.0+cpu"
+  },
+  "sample_count": 10,
+  "performance": {
+    "latency_per_image_ms": 698.77,
+    "throughput_fps": 1.43,
+    "inference_time_ms": 629.78,
+    "postprocess_time_ms": 68.99
+  },
+  "metrics": {
+    "mAP50": 0.2667,
+    "mAP50_95": 0.2158,
+    "per_class_mAP50": {
+      "Expressway-Service-area": 0.0,
+      "Expressway-toll-station": 0.0,
+      "airplane": 0.0,
+      "airport": 0.0,
+      "baseballfield": 0.0,
+      "basketballcourt": 1.0,
+      "bridge": 0.8333,
+      "chimney": 0.0,
+      "dam": 0.0,
+      "golffield": 0.0,
+      "groundtrackfield": 1.0,
+      "harbor": 0.0,
+      "overpass": 0.5,
+      "ship": 0.0,
+      "stadium": 1.0,
+      "storagetank": 0.0,
+      "tenniscourt": 1.0,
+      "trainstation": 0.0,
+      "vehicle": 0.0,
+      "windmill": 0.0
+    },
+    "per_class_mAP50_95": {
+      "Expressway-Service-area": 0.0,
+      "Expressway-toll-station": 0.0,
+      "airplane": 0.0,
+      "airport": 0.0,
+      "baseballfield": 0.0,
+      "basketballcourt": 0.9,
+      "bridge": 0.4333,
+      "chimney": 0.0,
+      "dam": 0.0,
+      "golffield": 0.0,
+      "groundtrackfield": 0.8833,
+      "harbor": 0.0,
+      "overpass": 0.5,
+      "ship": 0.0,
+      "stadium": 1.0,
+      "storagetank": 0.0,
+      "tenniscourt": 0.6,
+      "trainstation": 0.0,
+      "vehicle": 0.0,
+      "windmill": 0.0
+    },
+    "size_metrics": {
+      "small": {
+        "mAP50": 0.05,
+        "mAP50_95": 0.05
+      },
+      "medium": {
+        "mAP50": 0.1,
+        "mAP50_95": 0.0941666667163372
+      },
+      "large": {
+        "mAP50": 0.175,
+        "mAP50_95": 0.12
+      }
+    }
+  },
+  "size_stratified_analysis": {
+    "use_relative_area": true,
+    "bins": {
+      "small": [
+        0.0,
+        0.0016
+      ],
+      "medium": [
+        0.0016,
+        0.0144
+      ],
+      "large": [
+        0.0144,
+        Infinity
+      ]
+    },
+    "metrics_per_bin": {
+      "small": {
+        "ground_truth_count": 1,
+        "prediction_count": 4,
+        "true_positives": 1,
+        "false_positives": 3,
+        "precision": 0.25,
+        "recall": 1.0,
+        "mAP50": 1.0,
+        "error_breakdown": {
+          "localization_errors": 0,
+          "class_confusions": 0,
+          "duplicate_fps": 0,
+          "background_fps": 3,
+          "missed_gts": 0
+        }
+      },
+      "medium": {
+        "ground_truth_count": 5,
+        "prediction_count": 14,
+        "true_positives": 5,
+        "false_positives": 9,
+        "precision": 0.3571,
+        "recall": 1.0,
+        "mAP50": 0.4389,
+        "error_breakdown": {
+          "localization_errors": 0,
+          "class_confusions": 1,
+          "duplicate_fps": 0,
+          "background_fps": 8,
+          "missed_gts": 0
+        }
+      },
+      "large": {
+        "ground_truth_count": 6,
+        "prediction_count": 27,
+        "true_positives": 6,
+        "false_positives": 21,
+        "precision": 0.2222,
+        "recall": 1.0,
+        "mAP50": 0.9167,
+        "error_breakdown": {
+          "localization_errors": 7,
+          "class_confusions": 0,
+          "duplicate_fps": 1,
+          "background_fps": 13,
+          "missed_gts": 0
+        }
+      }
+    }
+  },
+  "error_analysis": {
+    "tp": 12,
+    "localization_errors": 11,
+    "class_confusions": 2,
+    "duplicate_fps": 2,
+    "background_fps": 18,
+    "missed_gts": 0,
+    "small_object_misses": 0,
+    "boundary_misses": 0,
+    "total_preds": 45,
+    "total_gts": 12,
+    "total_fps": 33,
+    "fp_shares": {
+      "localization": 0.3333,
+      "confusion": 0.0606,
+      "duplicate": 0.0606,
+      "background": 0.5455
+    },
+    "confidence_stats": {
+      "tp_mean": 0.6986,
+      "fp_mean": 0.4769,
+      "tp_scores": [
+        0.9438397288322449,
+        0.9415159225463867,
+        0.9396895170211792,
+        0.9238810539245605,
+        0.7182670831680298,
+        0.5546301603317261,
+        0.46758753061294556,
+        0.3356635868549347,
+        0.709954023361206,
+        0.664849042892456,
+        0.45873165130615234,
+        0.724772572517395
+      ],
+      "fp_scores": [
+        0.3240818977355957,
+        0.31963080167770386,
+        0.30133354663848877,
+        0.9001521468162537,
+        0.8649163246154785,
+        0.8336670398712158,
+        0.7910553216934204,
+        0.8947901129722595,
+        0.8674806952476501,
+        0.3755357265472412,
+        0.36047351360321045,
+        0.2810591757297516,
+        0.2704099416732788,
+        0.2582026720046997,
+        0.34813234210014343,
+        0.4888451397418976,
+        0.43232786655426025,
+        0.3062509000301361,
+        0.2926991283893585,
+        0.28847962617874146,
+        0.39718329906463623,
+        0.4586026072502136,
+        0.3573191165924072,
+        0.7803025245666504,
+        0.6832296252250671,
+        0.5419119596481323,
+        0.41771528124809265,
+        0.27895334362983704,
+        0.34696733951568604,
+        0.3483792245388031,
+        0.5364454388618469,
+        0.42713651061058044,
+        0.3650608956813812
+      ]
+    }
+  }
+}

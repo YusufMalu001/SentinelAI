@@ -1,0 +1,108 @@
+{
+  "experiment_id": "exp0_baseline",
+  "timestamp": "2026-11-24T19:09:02.853342+00:00",
+  "config": {
+    "experiment": "exp0_baseline_reproduction",
+    "weights": "runs/detect/yolov8n_epochs50_batch16/weights/best.pt",
+    "imgsz": 800,
+    "conf_threshold": 0.25,
+    "inherited_test_mAP50": 0.71,
+    "inherited_test_mAP50_95": 0.485
+  },
+  "environment": {
+    "python_version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+    "processor": "",
+    "torch_version": "2.15.0+cpu",
+    "cuda_available": false,
+    "cuda_device_name": null
+  },
+  "sample_count": 10,
+  "performance": {
+    "latency_per_image_ms": 166.49,
+    "throughput_fps": 6.01,
+    "inference_time_ms": 165.72,
+    "postprocess_time_ms": 0.76
+  },
+  "metrics": {
+    "mAP50": 0.3,
+    "mAP50_95": 0.3,
+    "per_class_mAP50": {
+      "Expressway-Service-area": 0.0,
+      "Expressway-toll-station": 0.0,
+      "airplane": 0.0,
+      "airport": 0.0,
+      "baseballfield": 0.0,
+      "basketballcourt": 1.0,
+      "bridge": 1.0,
+      "chimney": 0.0,
+      "dam": 0.0,
+      "golffield": 0.0,
+      "groundtrackfield": 1.0,
+      "harbor": 0.0,
+      "overpass": 1.0,
+      "ship": 0.0,
+      "stadium": 1.0,
+      "storagetank": 0.0,
+      "tenniscourt": 1.0,
+      "trainstation": 0.0,
+      "vehicle": 0.0,
+      "windmill": 0.0
+    },
+    "per_class_mAP50_95": {
+      "Expressway-Service-area": 0.0,
+      "Expressway-toll-station": 0.0,
+      "airplane": 0.0,
+      "airport": 0.0,
+      "baseballfield": 0.0,
+      "basketballcourt": 1.0,
+      "bridge": 1.0,
+      "chimney": 0.0,
+      "dam": 0.0,
+      "golffield": 0.0,
+      "groundtrackfield": 1.0,
+      "harbor": 0.0,
+      "overpass": 1.0,
+      "ship": 0.0,
+      "stadium": 1.0,
+      "storagetank": 0.0,
+      "tenniscourt": 1.0,
+      "trainstation": 0.0,
+      "vehicle": 0.0,
+      "windmill": 0.0
+    },
+    "size_metrics": {
+      "small": {
+        "mAP50": 0.05,
+        "mAP50_95": 0.05
+      },
+      "medium": {
+        "mAP50": 0.1,
+        "mAP50_95": 0.1
+      },
+      "large": {
+        "mAP50": 0.2,
+        "mAP50_95": 0.2
+      }
+    }
+  },
+  "error_analysis": {
+    "tp": 12,
+    "localization_errors": 0,
+    "class_confusions": 1,
+    "duplicate_fps": 0,
+    "background_fps": 4,
+    "missed_gts": 0,
+    "small_object_misses": 0,
+    "boundary_misses": 0,
+    "total_preds": 17,
+    "total_gts": 12,
+    "total_fps": 5,
+    "fp_shares": {
+      "localization": 0.0,
+      "confusion": 0.2,
+      "duplicate": 0.0,
+      "background": 0.8
+    }
+  }
+}

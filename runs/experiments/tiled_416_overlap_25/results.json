@@ -1,0 +1,202 @@
+{
+  "experiment_id": "tiled_416_overlap_25",
+  "timestamp": "2026-11-24T19:22:23.718321+00:00",
+  "config": {
+    "name": "tiled_416_overlap_25",
+    "seed": 42,
+    "inference": {
+      "mode": "tiled",
+      "imgsz": 800,
+      "tile_size": 416,
+      "tile_width": null,
+      "tile_height": null,
+      "overlap": 0.25,
+      "overlap_x": null,
+      "overlap_y": null,
+      "confidence_threshold": 0.25,
+      "iou_threshold": 0.5,
+      "fusion_method": "nms",
+      "scales": [
+        640,
+        800,
+        1024
+      ],
+      "include_full_image": true,
+      "batch_size": 1
+    },
+    "evaluation": {
+      "split": "validation",
+      "iou_threshold": 0.5,
+      "use_relative_size": true,
+      "max_samples": null
+    }
+  },
+  "environment": {
+    "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+    "processor": "",
+    "python_version": "3.14.4",
+    "cpu_count_logical": 4,
+    "cpu_count_physical": 2,
+    "total_ram_gb": 14.99,
+    "cuda_available": false,
+    "cuda_device_name": null,
+    "cuda_device_count": 0,
+    "peak_gpu_memory_mb": null,
+    "torch_version": "2.15.0+cpu"
+  },
+  "sample_count": 3,
+  "performance": {
+    "latency_per_image_ms": 658.96,
+    "throughput_fps": 1.52,
+    "inference_time_ms": 658.67,
+    "postprocess_time_ms": 0.29
+  },
+  "metrics": {
+    "mAP50": 0.1,
+    "mAP50_95": 0.09,
+    "per_class_mAP50": {
+      "Expressway-Service-area": 0.0,
+      "Expressway-toll-station": 0.0,
+      "airplane": 0.0,
+      "airport": 0.0,
+      "baseballfield": 0.0,
+      "basketballcourt": 1.0,
+      "bridge": 0.0,
+      "chimney": 0.0,
+      "dam": 0.0,
+      "golffield": 0.0,
+      "groundtrackfield": 0.0,
+      "harbor": 0.0,
+      "overpass": 0.0,
+      "ship": 0.0,
+      "stadium": 0.0,
+      "storagetank": 0.0,
+      "tenniscourt": 1.0,
+      "trainstation": 0.0,
+      "vehicle": 0.0,
+      "windmill": 0.0
+    },
+    "per_class_mAP50_95": {
+      "Expressway-Service-area": 0.0,
+      "Expressway-toll-station": 0.0,
+      "airplane": 0.0,
+      "airport": 0.0,
+      "baseballfield": 0.0,
+      "basketballcourt": 0.8,
+      "bridge": 0.0,
+      "chimney": 0.0,
+      "dam": 0.0,
+      "golffield": 0.0,
+      "groundtrackfield": 0.0,
+      "harbor": 0.0,
+      "overpass": 0.0,
+      "ship": 0.0,
+      "stadium": 0.0,
+      "storagetank": 0.0,
+      "tenniscourt": 1.0,
+      "trainstation": 0.0,
+      "vehicle": 0.0,
+      "windmill": 0.0
+    },
+    "size_metrics": {
+      "small": {
+        "mAP50": 0.0,
+        "mAP50_95": 0.0
+      },
+      "medium": {
+        "mAP50": 0.0,
+        "mAP50_95": 0.0
+      },
+      "large": {
+        "mAP50": 0.1,
+        "mAP50_95": 0.09
+      }
+    }
+  },
+  "size_stratified_analysis": {
+    "use_relative_area": true,
+    "bins": {
+      "small": [
+        0.0,
+        0.0016
+      ],
+      "medium": [
+        0.0016,
+        0.0144
+      ],
+      "large": [
+        0.0144,
+        Infinity
+      ]
+    },
+    "metrics_per_bin": {
+      "small": {
+        "ground_truth_count": 0,
+        "prediction_count": 0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "mAP50": 0.0,
+        "error_breakdown": {
+          "localization_errors": 0,
+          "class_confusions": 0,
+          "duplicate_fps": 0,
+          "background_fps": 0,
+          "missed_gts": 0
+        }
+      },
+      "medium": {
+        "ground_truth_count": 0,
+        "prediction_count": 6,
+        "true_positives": 0,
+        "false_positives": 6,
+        "precision": 0.0,
+        "recall": 0.0,
+        "mAP50": 0.0,
+        "error_breakdown": {
+          "localization_errors": 0,
+          "class_confusions": 0,
+          "duplicate_fps": 0,
+          "background_fps": 6,
+          "missed_gts": 0
+        }
+      },
+      "large": {
+        "ground_truth_count": 4,
+        "prediction_count": 6,
+        "true_positives": 4,
+        "false_positives": 2,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "mAP50": 1.0,
+        "error_breakdown": {
+          "localization_errors": 0,
+          "class_confusions": 0,
+          "duplicate_fps": 0,
+          "background_fps": 2,
+          "missed_gts": 0
+        }
+      }
+    }
+  },
+  "error_analysis": {
+    "tp": 4,
+    "localization_errors": 4,
+    "class_confusions": 0,
+    "duplicate_fps": 1,
+    "background_fps": 3,
+    "missed_gts": 0,
+    "small_object_misses": 0,
+    "boundary_misses": 0,
+    "total_preds": 12,
+    "total_gts": 4,
+    "total_fps": 8,
+    "fp_shares": {
+      "localization": 0.5,
+      "confusion": 0.0,
+      "duplicate": 0.125,
+      "background": 0.375
+    }
+  }
+}

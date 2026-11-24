@@ -1,0 +1,15 @@
+experiment:
+  name: multiscale_ensemble
+  seed: 42
+
+inference:
+  mode: multiscale
+  scales: [640, 800, 1024]
+  confidence_threshold: 0.25
+  iou_threshold: 0.55
+  fusion_method: wbf
+
+evaluation:
+  split: validation
+  iou_threshold: 0.50
+  use_relative_size: true

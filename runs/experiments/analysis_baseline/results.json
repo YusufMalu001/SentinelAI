@@ -1,0 +1,204 @@
+{
+  "experiment_id": "analysis_baseline",
+  "timestamp": "2026-11-24T19:27:22.229902+00:00",
+  "config": {
+    "name": "analysis_baseline",
+    "inference": {
+      "mode": "whole",
+      "imgsz": 800
+    }
+  },
+  "environment": {
+    "platform": "Linux-7.0.0-43-generic-x86_64-with-glibc2.43",
+    "processor": "",
+    "python_version": "3.14.4",
+    "cpu_count_logical": 4,
+    "cpu_count_physical": 2,
+    "total_ram_gb": 14.99,
+    "cuda_available": false,
+    "cuda_device_name": null,
+    "cuda_device_count": 0,
+    "peak_gpu_memory_mb": null,
+    "torch_version": "2.15.0+cpu"
+  },
+  "sample_count": 10,
+  "performance": {
+    "latency_per_image_ms": 175.36,
+    "throughput_fps": 5.7,
+    "inference_time_ms": 174.59,
+    "postprocess_time_ms": 0.78
+  },
+  "metrics": {
+    "mAP50": 0.3,
+    "mAP50_95": 0.3,
+    "per_class_mAP50": {
+      "Expressway-Service-area": 0.0,
+      "Expressway-toll-station": 0.0,
+      "airplane": 0.0,
+      "airport": 0.0,
+      "baseballfield": 0.0,
+      "basketballcourt": 1.0,
+      "bridge": 1.0,
+      "chimney": 0.0,
+      "dam": 0.0,
+      "golffield": 0.0,
+      "groundtrackfield": 1.0,
+      "harbor": 0.0,
+      "overpass": 1.0,
+      "ship": 0.0,
+      "stadium": 1.0,
+      "storagetank": 0.0,
+      "tenniscourt": 1.0,
+      "trainstation": 0.0,
+      "vehicle": 0.0,
+      "windmill": 0.0
+    },
+    "per_class_mAP50_95": {
+      "Expressway-Service-area": 0.0,
+      "Expressway-toll-station": 0.0,
+      "airplane": 0.0,
+      "airport": 0.0,
+      "baseballfield": 0.0,
+      "basketballcourt": 1.0,
+      "bridge": 1.0,
+      "chimney": 0.0,
+      "dam": 0.0,
+      "golffield": 0.0,
+      "groundtrackfield": 1.0,
+      "harbor": 0.0,
+      "overpass": 1.0,
+      "ship": 0.0,
+      "stadium": 1.0,
+      "storagetank": 0.0,
+      "tenniscourt": 1.0,
+      "trainstation": 0.0,
+      "vehicle": 0.0,
+      "windmill": 0.0
+    },
+    "size_metrics": {
+      "small": {
+        "mAP50": 0.05,
+        "mAP50_95": 0.05
+      },
+      "medium": {
+        "mAP50": 0.1,
+        "mAP50_95": 0.1
+      },
+      "large": {
+        "mAP50": 0.2,
+        "mAP50_95": 0.2
+      }
+    }
+  },
+  "size_stratified_analysis": {
+    "use_relative_area": true,
+    "bins": {
+      "small": [
+        0.0,
+        0.0016
+      ],
+      "medium": [
+        0.0016,
+        0.0144
+      ],
+      "large": [
+        0.0144,
+        Infinity
+      ]
+    },
+    "metrics_per_bin": {
+      "small": {
+        "ground_truth_count": 1,
+        "prediction_count": 2,
+        "true_positives": 1,
+        "false_positives": 1,
+        "precision": 0.5,
+        "recall": 1.0,
+        "mAP50": 1.0,
+        "error_breakdown": {
+          "localization_errors": 0,
+          "class_confusions": 0,
+          "duplicate_fps": 0,
+          "background_fps": 1,
+          "missed_gts": 0
+        }
+      },
+      "medium": {
+        "ground_truth_count": 5,
+        "prediction_count": 6,
+        "true_positives": 5,
+        "false_positives": 1,
+        "precision": 0.8333,
+        "recall": 1.0,
+        "mAP50": 1.0,
+        "error_breakdown": {
+          "localization_errors": 0,
+          "class_confusions": 0,
+          "duplicate_fps": 0,
+          "background_fps": 1,
+          "missed_gts": 0
+        }
+      },
+      "large": {
+        "ground_truth_count": 6,
+        "prediction_count": 9,
+        "true_positives": 6,
+        "false_positives": 3,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "mAP50": 1.0,
+        "error_breakdown": {
+          "localization_errors": 0,
+          "class_confusions": 0,
+          "duplicate_fps": 0,
+          "background_fps": 3,
+          "missed_gts": 0
+        }
+      }
+    }
+  },
+  "error_analysis": {
+    "tp": 12,
+    "localization_errors": 0,
+    "class_confusions": 1,
+    "duplicate_fps": 0,
+    "background_fps": 4,
+    "missed_gts": 0,
+    "small_object_misses": 0,
+    "boundary_misses": 0,
+    "total_preds": 17,
+    "total_gts": 12,
+    "total_fps": 5,
+    "fp_shares": {
+      "localization": 0.0,
+      "confusion": 0.2,
+      "duplicate": 0.0,
+      "background": 0.8
+    },
+    "confidence_stats": {
+      "tp_mean": 0.7017,
+      "fp_mean": 0.3307,
+      "tp_scores": [
+        0.9586594104766846,
+        0.9557802677154541,
+        0.9495289921760559,
+        0.9220471382141113,
+        0.7202030420303345,
+        0.6642717123031616,
+        0.4236692190170288,
+        0.36717212200164795,
+        0.709954023361206,
+        0.6766524314880371,
+        0.4163704216480255,
+        0.6557402014732361
+      ],
+      "fp_scores": [
+        0.3149624168872833,
+        0.3400634229183197,
+        0.3434916138648987,
+        0.3062509000301361,
+        0.3486854135990143
+      ]
+    }
+  }
+}
